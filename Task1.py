@@ -1,34 +1,40 @@
-'''Write a program to store information about 5 students
+"""Write a program to store information about 5 students
  (name, roll number, and marks) using a list of dictionaries.
-  Each dictionary should represent one student.'''
-
-class Student():
-    def entry(self):
-        dict = {}
-        name = input(f'Enter student name: ')
+  Each dictionary should represent one student."""
+class Student:
+    def user_input(self):
+        """user input function gets the data from user
+and returns a dictionary of student data."""
+        student_dict = {}
+        student_name = input(f'Enter student name: ')
         roll_number = input(f'Enter roll number: ')
         marks = input('Enter marks: ')
-        dict['name']=name
-        dict['roll Number']=roll_number
-        dict['marks']= marks
-        return dict
-    def print_data(self,dict):
-        print(dict["name"],dict["roll Number"],dict["marks"])
+        student_dict['name'] = student_name
+        student_dict['roll Number'] = roll_number
+        student_dict['marks'] = marks
+        return student_dict
+
+
+    def print_data(self, dictionary_Student):
+        """This function takes Student dictionary as argument
+and prints the data with formating"""
+        print(dictionary_Student["name"],"\t", dictionary_Student["roll Number"],"\t",dictionary_Student["marks"])
 
 def main():
-    std = Student()
-    std2 = Student()
-    std3 = Student()
-    std4 = Student()
-    std5 = Student()
-    std_p = std.entry()
-    std2_p=std2.entry()
-    std3_p=std3.entry()
-    std4_p=std4.entry()
-    std5_p= std5.entry()
-    std.print_data(std_p)
-    std.print_data(std2_p)
-    std.print_data(std3_p)
-    std.print_data(std4_p)
-    std.print_data(std5_p)
-main()
+    # for x in range(6):
+    student_1, student_2, student_3, student_4, student_5 = Student(), Student(), Student(), Student(), Student()
+    object_list = [student_1, student_2, student_3, student_4, student_5]
+    return_list = []
+    for instance in object_list:
+        return_list.append(instance.user_input())
+    print(Student.user_input.__doc__)
+    index = 0
+    for instance in object_list:
+        instance.print_data(return_list[index])
+        index += 1
+    print(Student.print_data.__doc__)
+
+
+
+if __name__ == "__main__":
+    main()

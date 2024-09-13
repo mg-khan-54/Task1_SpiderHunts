@@ -1,25 +1,28 @@
-'''Write a program that takes a list of student marks
+"""Write a program that takes a list of student marks
  and counts how many times each mark appears using a dictionary.
-'''
-std = {}
-marks = []
-result = {}
-counter = 0
-ab = 0
-name = input("Enter your name: ")
+"""
+if __name__ == "__main__":
 
-for x in range(0,10):
-    mar = int(input('Enter marks: '))
-    marks.append(mar)
-std[name]= marks
-print(std)
-for x,y in std.items():
-    for a in y:
-        num = a
-        for c in range(len(y)):
-            if num == y[c]:
-                counter += 1
-            result[a] = counter
-            ab += 1
-        counter = 0
-print(result)
+    student_data = {}
+    marks_list = []
+    final_result = {}
+    counter = 0
+    index = 0
+    input_name = input("Enter your name: ")
+
+    for x in range(0, 10):
+        input_marks = int(input('Enter marks: '))
+        marks_list.append(input_marks)  #creats marks list form user input
+    student_data[input_name] = marks_list  #creates dictionary with name as key and marks list as value
+    print(student_data)
+
+    for name, mark_list in student_data.items():
+        for mark in mark_list:
+            value = mark
+            for index_ in range(len(mark_list)):
+                if value == mark_list[index_]:
+                    counter += 1
+                final_result[mark] = counter
+                index += 1
+            counter = 0
+    print(final_result)
