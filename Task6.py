@@ -3,13 +3,20 @@ and their marks as values. Write a function to calculate
  and return the average marks of all students.'''
 
 
-def students(std):
-    total = 0
-    for x,y in std.items():
-        total += y
-    print(total/len(std))
+def students(student_Dict):
+    '''This function takes dictionary as argument of student names and marks,
+and returns average of all students marks'''
+    total_marks = 0
+    for name, marks in student_Dict.items():
+        total_marks += marks
+    print(total_marks / len(student_Dict))
 
-def main():
-    std = {"ghani": 56, "sufyan": 45, "khizer": 78, "shahbaz": 34}
-    students(std)
-main()
+
+if __name__ == "__main__":
+    def main():
+        student_dictionary = {"ghani": 56, "sufyan": 45, "khizer": 78, "shahbaz": 34}
+        students(student_dictionary)
+        # print(students.__doc__)
+
+
+    main()
