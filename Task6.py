@@ -1,21 +1,22 @@
-'''Create a dictionary with student names as keys
+"""Create a dictionary with student names as keys
 and their marks as values. Write a function to calculate
- and return the average marks of all students.'''
+and return the average marks of all students."""
 
 
-def students(student_Dict):
-    '''This function takes dictionary as argument of student names and marks,
-and returns average of all students marks'''
+def students_average(student_dict):
+    """This function takes dictionary as argument of student names and marks,
+and returns average of all students marks"""
     total_marks = 0
-    for name, marks in student_Dict.items():
+    for name, marks in student_dict.items():
         total_marks += marks
-    print(total_marks / len(student_Dict))
+    print(total_marks / len(student_dict))
 
 
 if __name__ == "__main__":
     def main():
+        '''this is main function'''
         student_dictionary = {"ghani": 56, "sufyan": 45, "khizer": 78, "shahbaz": 34}
-        students(student_dictionary)
+        students_average(student_dictionary)
         # print(students.__doc__)
 
 

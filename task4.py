@@ -5,10 +5,10 @@
 
 if __name__ == "__main__":
     students_Dictionary = {'Ghani': 56, 'Khizer': 78, 'Sufyan': 34, 'Shahbaz': 98}
-    student_name = input('Enter student name: ')
+    Student_Name = input('Enter student name: ')
     print(students_Dictionary)
     for name, marks in students_Dictionary.items():
-        if name == student_name.capitalize():
+        if name == Student_Name.capitalize():
             print(f"15 Marks Awarded to {name}")
             students_Dictionary[name] = marks + 15
     print(students_Dictionary)

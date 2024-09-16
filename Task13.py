@@ -2,10 +2,9 @@
  Write a function that calculates and returns the
   difference between the highest and lowest marks in the class."""
 
-student_marks = {'Ghani': 85, 'Khizer': 32, 'Sufyan': 189}
-
-
 def calculate(student_dictionary):
+    """This function takes a dictionary as argument, calculates and returns the
+difference between the highest and lowest marks in the class"""
     highest_score = 0
     lowest_score = 0
     for student_name, marks in student_dictionary.items():
@@ -22,6 +21,8 @@ def calculate(student_dictionary):
 
 
 def main():
+    """This is main function"""
+    student_marks = {'Ghani': 85, 'Khizer': 32, 'Sufyan': 189}
     print(student_marks)
     print(f"Difference is {calculate(student_marks)}")
 

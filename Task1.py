@@ -1,13 +1,13 @@
-"""Write a program to store information about 5 students
- (name, roll number, and marks) using a list of dictionaries.
-  Each dictionary should represent one student."""
+"""user input function gets the data from user
+and returns a dictionary of student data."""
 class Student:
+    """this is a student class."""
     def user_input(self):
         """user input function gets the data from user
 and returns a dictionary of student data."""
         student_dict = {}
-        student_name = input(f'Enter student name: ')
-        roll_number = input(f'Enter roll number: ')
+        student_name = input('Enter student name: ')
+        roll_number = input('Enter roll number: ')
         marks = input('Enter marks: ')
         student_dict['name'] = student_name
         student_dict['roll Number'] = roll_number
@@ -15,14 +15,16 @@ and returns a dictionary of student data."""
         return student_dict
 
 
-    def print_data(self, dictionary_Student):
+    def print_data(self, dictionary_student):
         """This function takes Student dictionary as argument
 and prints the data with formating"""
-        print(dictionary_Student["name"],"\t", dictionary_Student["roll Number"],"\t",dictionary_Student["marks"])
+        print(dictionary_student["name"],"\t", dictionary_student["roll Number"],
+              "\t",dictionary_student["marks"])
 
 def main():
-    # for x in range(6):
-    student_1, student_2, student_3, student_4, student_5 = Student(), Student(), Student(), Student(), Student()
+    '''this is main function'''
+    student_1, student_2, student_3 = Student(), Student(), Student()
+    student_4, student_5 = Student(), Student()
     object_list = [student_1, student_2, student_3, student_4, student_5]
     return_list = []
     for instance in object_list:

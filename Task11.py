@@ -1,7 +1,7 @@
-'''You have 3 dictionaries, each representing different
+"""You have 3 dictionaries, each representing different
 subjects and their corresponding marks for students.
 Write a program to merge these dictionaries into one
-where each student has their total marks from all subjects.'''
+where each student has their total marks from all subjects."""
 
 student_1 = [{"Name": "Ghani"}, {"python": 34}, {"PHP": 23}, {"Java": 28}]
 student_2 = [{"Name": "Khizer"}, {"python": 76}, {"PHP": 34}, {"Java": 65}]
@@ -10,8 +10,8 @@ merged_dictionary = {}
 
 
 def student(student_list):
-    '''student function that takes a list of dictionaries as input of student data
-and returns a dictionary with each student total marks'''
+    """student function that takes a list of dictionaries as input of student data
+and returns a dictionary with each student total marks"""
     student_name = ''
     total_marks = 0
     for index in student_list:
@@ -22,15 +22,14 @@ and returns a dictionary with each student total marks'''
                 total_marks += value
         merged_dictionary[student_name] = total_marks
 
-
 def main():
+    """This is main function"""
     student(student_1)
     student(student_2)
     student(student_3)
     print(merged_dictionary)
 
     # print(student.__doc__)
-
 
 if __name__ == "__main__":
     main()
